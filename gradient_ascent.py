@@ -11,8 +11,7 @@ class GradientAscent(object):
         cost: the cost function to be minimized
         gradient: function to calculate the gradient of the cost function
         '''
-        # Initialize coefficients in run method once you know how many features
-        # you have.
+        
         self.coeffs = None
         self.cost = cost
         self.gradient = gradient
@@ -94,7 +93,11 @@ class GradientAscent(object):
         return self.predict_func(X, self.coeffs)
 
     def scale_X(self, X):
-
+        '''
+        INPUT: GradientAscent, 2 dimensional numpy array
+        OUTPUT: numpy array (floats)
+        Return X after scaling with its mean and standard deviation
+        '''
         mean = X.mean(axis=0)
         std = X.std(axis=0)
         return (X - mean) / std
