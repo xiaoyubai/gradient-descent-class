@@ -1,2 +1,2 @@
-# gradient-descent-class
-Implementation of gradient descent algorithm
+# gradient-ascent-class
+Implementation of gradient ascent algorithm
